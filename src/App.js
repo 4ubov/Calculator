@@ -2,7 +2,7 @@ import React from 'react';
 import './#Source/scss/App.scss';
 import ButtonRow from './Components/ButtonsRow';
 import ReactDOM from 'react-dom';
-import {output_value,output_value2} from './State';
+import {ComponentDidMount,onKey,output_value,output_value2} from './State';
 
 
 
@@ -11,6 +11,7 @@ function App(props) {
   
   return (
     <div className="main-wrapper">
+      {ComponentDidMount()}
       <div className="title">CALCULATOR</div>
       <div className="calculator-wrapper">
         <div className="output-wrapper">

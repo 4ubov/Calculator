@@ -51,17 +51,24 @@ body{
 			height: 93px;
 			
 			div{
-				width: 351px;
-				height: 40px;
-				overflow: hidden;
-				position: relative;
-				&:before{
-					display: inline-block;
+				border: 1px solid rgba(255, 0, 0, 0);
+				width: 340px;
+				height:42px;
+				left : 6.5px;
+				top: 5px;
+				overflow-x: auto; 
+                overflow-y: hidden; 
+				white-space: nowrap; 
+
+				&::-webkit-scrollbar {
+					width: 0px;
+					background: rgba(255, 0, 0, 0);
+					height: 0px;
 				}
+				position: relative;
+				
 				p.OutUp{
-					position: absolute;
-					bottom: 0;
-					right: 0;
+
 					text-align:right;
 					font-family: Roboto;
 					font-size: 18px;
@@ -74,10 +81,23 @@ body{
 					
 					text-align:right;
 					padding: 8px;
-					padding-top: 15px;
+					
 				}
 			}
 			p.OutDown{
+				
+				
+				overflow-x: auto; 
+                overflow-y: hidden; 
+				white-space: nowrap; 
+
+				&::-webkit-scrollbar {
+					width: 0px;
+					height: 0px;
+					background: rgba(255, 0, 0, 0);
+				}
+				position: relative;
+
 				color:black;
 				font-family: Roboto;
 				font-size: 42px;
@@ -90,11 +110,12 @@ body{
 
 				//Position input block
 				display: block;
-				width: 351px;
+				width: 333px;
+				left: 13px;
 				height: 49px;
 				text-align:right;
-				
 				padding: 7px;
+				bottom: 5px;
 				//end
 				
 				
