@@ -66,10 +66,12 @@ export function delete_symbol(e){
         if(output_value.length==0){
             output_value="0";
         }
+        result="";
         rerenderEnireTree(switch_sign, divide, multiply, minus, equal_sign, plus,output_value,output_value2,addValue,delete_symbol);
     }
     else if (e=="CE"){
         output_value="0";
+        result="";
         rerenderEnireTree(switch_sign, divide, multiply, minus, equal_sign, plus,output_value,output_value2,addValue,delete_symbol);
     }
     else if (e=="C"){
@@ -106,9 +108,10 @@ export function addValue(value){
             output_value=tmp;
             
         }else{
-            if(tmp.length>1 && ucorrect.indexOf(tmp.slice(1,2))!=-1){
+            if(tmp.length>1 && ucorrect.indexOf(tmp.slice(1,2))!=-1 || tmp==result && output_value2.length==0){
                 tmp = value;
                 output_value=tmp;
+                result="";
             }
             else{
                 output_value=tmp+value;
