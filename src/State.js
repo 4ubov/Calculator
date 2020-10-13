@@ -85,13 +85,20 @@ export function delete_symbol(e){
 
 export function addValue(value){
     output_value = output_value.toString();
+
     if(value=="." && output_value.indexOf(".")==-1){
         let tmp=output_value.toString();
-        if(tmp.length==0){
-            output_value = "0"+value;
+        if(tmp==result && output_value2.length==0){
+                output_value = "0"+value;
+                result="";
         }
         else{
-            output_value = tmp+value;
+            if(tmp.length==0){
+                output_value = "0"+value;
+            }
+            else{
+                output_value = tmp+value;
+            }
         }
         
     }
