@@ -103,7 +103,14 @@ export function addValue(value){
         
     }
     else if(value=="." && output_value.indexOf(".")!=-1){
-        return 0;
+        if(output_value==result && output_value2.length==0){
+            output_value = "0"+value;
+            result="";
+        }
+        else{
+            return 0;
+        }
+        
     }
     else{
         let correct = ["0","1","2","3","4","5","6","7","8","9","-"]; //Anti Nan and Infinity
