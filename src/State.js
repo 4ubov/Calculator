@@ -7,7 +7,7 @@ var result = "";
 
 export function switch_sign(){
     if(output_value.length!=0){
-        output_value=math.evaluate(output_value+ "* -1");
+        output_value=math.evaluate(output_value+ "* -1").toString();
         rerenderEnireTree(switch_sign, divide, multiply, minus, equal_sign, plus,output_value,output_value2,addValue,delete_symbol);
     }
 }
@@ -50,10 +50,8 @@ export function multiply(){
 export function equal_sign(){
     if(output_value.length!=0){
         let x = output_value2+output_value;
-        result=math.evaluate(x).toString();
-        if(result==0.30000000000000004 || result==-0.30000000000000004){
-            result=0.3;
-        }
+
+        result=math.format(math.evaluate(x),{precision:14}).toString();
         output_value=result;
 
         output_value2="";
@@ -99,14 +97,24 @@ export function addValue(value){
         return 0;
     }
     else{
-        let correct = ["0","1","2","3","4","5","6","7","8","9"]; //Anti Nan and Infinity
+        let correct = ["0","1","2","3","4","5","6","7","8","9","-"]; //Anti Nan and Infinity
+        let ucorrect = ["N","I"];
         let tmp=output_value.toString();
         
         if(tmp=="0" || correct.indexOf(tmp.slice(0,1))==-1 ){
             tmp = value;
             output_value=tmp;
+            
         }else{
-            output_value=tmp+value;
+            if(tmp.length>1 && ucorrect.indexOf(tmp.slice(1,2))!=-1){
+                tmp = value;
+                output_value=tmp;
+            }
+            else{
+                output_value=tmp+value;
+            }
+
+            
         }
         
     }
@@ -114,6 +122,7 @@ export function addValue(value){
     rerenderEnireTree(switch_sign, divide, multiply, minus, equal_sign, plus,output_value,output_value2,addValue,delete_symbol);
 }
 
+//Input from keyboard
 export let onKey = (event) => {
     if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0','.'].indexOf(event.key) != -1){
         addValue(event.key);
