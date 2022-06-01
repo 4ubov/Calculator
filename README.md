@@ -1,9 +1,9 @@
 Стандартный калькулятор написанный с использованием технологий:
   Html, scss, Js, React, NodeJs.
 ## For start using this app, you need to do a few things:
-## 1. Clone repos `git clone https://github.com/chubovilya/Calculator.git`
-## 2. Download some modules - `npm install`
-## 3. Start project - `npm start`
+# 1. Clone repos - `git clone https://github.com/chubovilya/Calculator.git`
+# 2. Download some modules - `npm install`
+# 3. Start project - `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
