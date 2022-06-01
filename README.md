@@ -1,5 +1,6 @@
 Стандартный калькулятор написанный с использованием технологий:
   Html, scss, Js, React, NodeJS.
+Разрабатывался согласно ТЗ. (Есть в файлах)
 ## For start using this app, you need to do a few things:
 ### 1. Clone repos - `git clone https://github.com/chubovilya/Calculator.git`
 ### 2. Download some modules - `npm install`
