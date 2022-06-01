@@ -9,8 +9,10 @@ Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Scrins
-![image](https://user-images.githubusercontent.com/46792640/171490854-ee024a30-edd7-469e-a00d-6c4737dcee28.png)
-![image](https://user-images.githubusercontent.com/46792640/171490970-b5d2940a-b7ac-449a-9f23-171cd5c2aac8.png)
-![image](https://user-images.githubusercontent.com/46792640/171490939-2dfd3258-a4d4-450d-85c5-00fd4706dc73.png)
+![image](https://user-images.githubusercontent.com/46792640/171491232-394b3bbf-9881-42f7-9700-e66c883c82f7.png)
+
+![image](https://user-images.githubusercontent.com/46792640/171491295-4ef4ae65-4ad6-4ded-b01d-53a464c12c85.png)
+
+![image](https://user-images.githubusercontent.com/46792640/171491343-12d16b9a-15f5-485e-b9da-ea67e7e9a72a.png)
 
 ## End =)
