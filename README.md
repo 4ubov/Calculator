@@ -1,5 +1,6 @@
 Стандартный калькулятор написанный с использованием технологий:
   Html, scss, Js, React, NodeJs.
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
